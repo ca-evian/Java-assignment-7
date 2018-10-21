@@ -5,11 +5,15 @@ public abstract class transport{
     public int getToStationTime;
     public int returnFromStationTime;
     public int ticketTime;
-    public int SecuritycheckIime;
+    public int securitycheckTime;
     public int waitingTime;
     public int speed;
-    public int pricePerKil;
+    public double pricePerKil;
 
-    public abstract ArrayList<>(int);
+    public abstract ArrayList<Double> timeMoneySpending(double kil);
 
+    public void print(ArrayList<Double> spending){
+        System.out.println("消耗时间：" + spending.get(0) +" 金钱：" + spending.get(1));
+
+    }
 }
